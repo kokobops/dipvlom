@@ -1,0 +1,26 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'prometheus'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['localhost:9090']
+  - job_name: 'node_exporter'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ["{{ lookup ('env', 'internal_ip_address_app') }}:9100"]
+      - targets: ["{{ lookup ('env', 'internal_ip_address_db01') }}:9100"]
+      - targets: ["{{ lookup ('env', 'internal_ip_address_db02') }}:9100"]
+      - targets: ["{{ lookup ('env', 'internal_ip_address_proxy') }}:9100"]
+      - targets: ["{{ lookup ('env', 'internal_ip_address_gitlab') }}:9100"]
+      - targets: ["{{ lookup ('env', 'internal_ip_address_runner') }}:9100"]
+      - targets: ["{{ lookup ('env', 'internal_ip_address_monitoring') }}:9100"]
+
+rule_files:
+  - alert.rules.yml
+
+alerting:
+  alertmanagers:
+  - static_configs:
+    - targets: ['localhost:9093']

@@ -1,0 +1,48 @@
+---
+# defaults file for proxy
+
+nginx_revproxy_sites:
+  dipvlom.ru:
+    client_max_body_size: "256M"
+    proxy_read_timeout: "360"
+    domains:
+      - dipvlom.ru
+      - www.dipvlom.ru
+    upstreams:
+      - {backend_address: "{{ lookup ('env', 'internal_ip_address_app') }}", backend_port: 80}
+    ssl: true
+    hsts_max_age: 63072000
+    letsencrypt: true
+    letsencrypt_email: "kokobops@dipvlom.ru"
+  gitlab.dipvlom.ru:
+    domains:
+      - gitlab.dipvlom.ru
+    upstreams:
+      - { backend_address: "{{ lookup ('env', 'internal_ip_address_gitlab') }}", backend_port: 80 }
+    ssl: true
+    letsencrypt: true
+    letsencrypt_email: "kokobops@dipvlom.ru"
+  grafana.dipvlom.ru:
+    domains:
+      - grafana.dipvlom.ru
+    upstreams:
+      - { backend_address: "{{ lookup ('env', 'internal_ip_address_monitoring') }}", backend_port: 3000 }
+    ssl: true
+    letsencrypt: true
+    letsencrypt_email: "kokobops@dipvlom.ru"
+  prometheus.dipvlom.ru:
+    domains:
+      - prometheus.dipvlom.ru
+    upstreams:
+      - { backend_address: "{{ lookup ('env', 'internal_ip_address_monitoring') }}", backend_port: 9090 }
+    ssl: true
+    letsencrypt: true
+    letsencrypt_email: "kokobops@dipvlom.ru"
+  alertmanager.dipvlom.ru:
+    domains:
+      - alertmanager.dipvlom.ru
+    upstreams:
+      - { backend_address: "{{ lookup ('env', 'internal_ip_address_monitoring') }}", backend_port: 9093 }
+    ssl: true
+    letsencrypt: true
+    letsencrypt_email: "kokobops@dipvlom.ru"

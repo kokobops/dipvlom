@@ -1,0 +1,6 @@
+---
+# vars file for prometheus
+serviceName: "prometheus"
+userId: "prometheus"
+groupId: "prometheus"
+version: "2.37.0"
