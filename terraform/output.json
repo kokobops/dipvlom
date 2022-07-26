@@ -1,0 +1,37 @@
+{
+  "internal_ip_address_app": {
+    "sensitive": false,
+    "type": "string",
+    "value": "172.16.10.21"
+  },
+  "internal_ip_address_db01": {
+    "sensitive": false,
+    "type": "string",
+    "value": "172.16.20.18"
+  },
+  "internal_ip_address_db02": {
+    "sensitive": false,
+    "type": "string",
+    "value": "172.16.30.7"
+  },
+  "internal_ip_address_gitlab": {
+    "sensitive": false,
+    "type": "string",
+    "value": "172.16.20.28"
+  },
+  "internal_ip_address_monitoring": {
+    "sensitive": false,
+    "type": "string",
+    "value": "172.16.10.18"
+  },
+  "internal_ip_address_proxy": {
+    "sensitive": false,
+    "type": "string",
+    "value": "172.16.10.254"
+  },
+  "internal_ip_address_runner": {
+    "sensitive": false,
+    "type": "string",
+    "value": "172.16.30.30"
+  }
+}
