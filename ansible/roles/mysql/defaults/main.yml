@@ -4,7 +4,7 @@
 # or sudo access
 mysql_user_home: /home/kokobops
 mysql_user_name: kokobops
-mysql_user_password: podkovka
+mysql_user_password: kokobops
 
 # The default root user installed by mysql - almost always root
 mysql_root_home: /root
