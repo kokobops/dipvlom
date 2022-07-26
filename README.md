@@ -25,7 +25,6 @@ export TF_VAR_SECRET_KEY="***"
 
 Вывод команды ```terraform plan```
 
->>>
 ```
 terraform plan
 
@@ -634,9 +633,8 @@ Changes to Outputs:
 
 Note: You didn't use the -out option to save this plan, so Terraform can't guarantee to take exactly these actions if you run "terraform apply" now.
 ```
-<<<
 
-![alt text](pctrs/cloud1.png "Дашборд")
+![alt text](pctrs/cloud.png "Дашборд")
 
 ![alt text](pctrs/cloud2.png "Виртуальные машины")
 
@@ -646,7 +644,7 @@ Note: You didn't use the -out option to save this plan, so Terraform can't guara
 
 ![alt text](pctrs/tls.png "tls")
 
-![alt text](pctrs/dipvlom.ru.png "dipvlom.ru")
+![alt text](pctrs/dpvlom.ru.png "dipvlom.ru")
 
 ![alt text](pctrs/gitlab.png "Gitlab")
 
@@ -684,3 +682,10 @@ Runner подключается автоматом
 Вырубил runner
 
 ![alt text](pctrs/alertmanager2.png "Alertmanager alert")
+
+
+[Terraform манифесты](https://github.com/kokobops/dipvlom/tree/main/terraform)
+
+
+
+[Ansible роли](https://github.com/kokobops/dipvlom/tree/main/ansible/roles)
