@@ -634,31 +634,49 @@ Changes to Outputs:
 Note: You didn't use the -out option to save this plan, so Terraform can't guarantee to take exactly these actions if you run "terraform apply" now.
 ```
 
+После выполнения 
+
 ![alt text](pctrs/cloud.png "Дашборд")
 
+Виртуальные машины
 ![alt text](pctrs/cloud2.png "Виртуальные машины")
 
 ### 3. Установка Nginx и LetsEncrypt
 
 Скриншоты веб серверов и сертификата tls
 
+TLS сертификат
+
 ![alt text](pctrs/tls.png "tls")
+
+APP
 
 ![alt text](pctrs/dpvlom.ru.png "dipvlom.ru")
 
+Gitlab
+
 ![alt text](pctrs/gitlab.png "Gitlab")
+
+Grafana
 
 ![alt text](pctrs/grafana.png "Grafana")
 
+Prometheus
+
 ![alt text](pctrs/prometheus.png "Prometheus")
 
+Alertmanager
 ![alt text](pctrs/alertmanager.png "Alertmanager")
 
 ### 4. Установка кластера MySQL
 
+Кластер MySQL поднимается ролью
+
 ![alt text](pctrs/sql.png "Кластер поднимается ролью")
 
 ### 5. Установка WordPress
+
+Админка
 
 ![alt text](pctrs/wordpress.png "WP Admin")
 
@@ -676,10 +694,17 @@ Runner подключается автоматом
 
 ### 7. Установка Prometheus, Alert Manager, Node Exporter и Grafana
 
+Prometheus Targets
+
 ![alt text](pctrs/prometheus2.png "Prometheus Targets")
+
+Dashboard grafana
+
 ![alt text](pctrs/grafana.png "Dashboard grafana")
 
 Вырубил runner
+
+Alertmanager alert
 
 ![alt text](pctrs/alertmanager2.png "Alertmanager alert")
 
